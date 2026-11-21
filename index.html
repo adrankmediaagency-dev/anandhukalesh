@@ -42,7 +42,7 @@ body{
   padding:35px 25px;text-align:center;box-shadow:0 0 25px rgba(0,0,0,0.15);transition:0.3s ease;
 }
 .card-box:hover{transform:translateY(-5px);box-shadow:0 0 35px rgba(0,0,0,0.2)}
-.profile-pic{width:130px;height:130px;object-fit:cover;border-radius:50%;border:4px solid gold;margin-bottom:18px}
+.profile-pic{width:130px;height:130px;object-fit:cover;border-radius:50%;border:4px solid gold;margin:18px 0}
 h1{font-size:26px;color:#c89b00;font-weight:700;margin-bottom:12px}
 .subtitle{font-size:16px;color:#444;margin-bottom:18px}
 .features{list-style:none;padding:0;margin:20px 0}
@@ -52,13 +52,6 @@ h1{font-size:26px;color:#c89b00;font-weight:700;margin-bottom:12px}
   color:#000;text-decoration:none;border-radius:10px;font-weight:bold;transition:0.3s ease;
 }
 .join-btn:hover{background:linear-gradient(135deg,orange,gold);transform:scale(1.03);color:#000}
-.redirect-msg{
-  margin:16px 0 4px;font-size:15px;color:#333;font-weight:600;
-}
-.redirect-msg span{
-  display:inline-block;min-width:28px;padding:2px 8px;border-radius:8px;
-  background:#c89b00;color:#fff;font-weight:700;
-}
 .disclaimer{margin-top:20px;font-size:13px;color:#555;line-height:1.6}
 .footer{margin-top:15px;font-size:12px;color:#777}
 @media(max-width:600px){
@@ -68,14 +61,29 @@ h1{font-size:26px;color:#c89b00;font-weight:700;margin-bottom:12px}
   .features li{font-size:14px}
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1897071464978303');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1897071464978303&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->  
 </head>
 
 <body>
 <div class="card-box">
 
   <a href="https://telegram.me/+aGYYRPkMgTMxNTE1" target="_blank" class="join-btn">JOIN TELEGRAM CHANNEL</a>
-
-  <p class="redirect-msg">Redirecting to Telegram in <span id="countdown">10</span> seconds…</p>
 
   <img src="image.jpg" alt="Anandhu Kalesh" class="profile-pic">
 
@@ -100,19 +108,5 @@ h1{font-size:26px;color:#c89b00;font-weight:700;margin-bottom:12px}
 
   <div class="footer">© 2026 WAY2LAABH. All Rights Reserved.</div>
 </div>
-
-<script>
-  var TELEGRAM_URL = "https://telegram.me/+aGYYRPkMgTMxNTE1";
-  var seconds = 10;
-  var el = document.getElementById("countdown");
-  var timer = setInterval(function () {
-    seconds--;
-    el.textContent = seconds;
-    if (seconds <= 0) {
-      clearInterval(timer);
-      window.location.href = TELEGRAM_URL;
-    }
-  }, 1000);
-</script>
 </body>
 </html>
